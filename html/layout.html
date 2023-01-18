@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <!-- 공통 meta -->
+  <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>하나은행</title>
+  <!-- 공통 css -->
+  <link rel="stylesheet" href="../css/common.css" type="text/css">
+</head>
+<body>
+  <div id="wrap" class="wrap"> 
+    <!-- header -->
+    <div id="header" class="app-header">
+      <button class="btn-back" title="이전 화면"></button>
+      <p class="page-tit">타이틀</p>
+      <button class="btn-close" title="닫기"></button>
+    </div>
+    <!-- //header -->
+    <!-- Content -->
+    <div id="content" class="app-main"> 
+      <div class="app-content mb-content">
+        <p>컨텐츠 영역</p>
+
+        <!-- input -->
+        <div class="form-area">
+          <div class="input">
+            <!--
+                * 오류시 class="input input--error"
+                * 비활성화시 class="input input--disabled" input 에 disabled 추가
+                * 데이터가 초기에 자동으로 입력되어 있을때 class="input input--on"
+            -->
+            <div class="input__inner">
+              <input type="text" id="inputText01" class="input__element" title="입력폼" placeholder="">
+              <label for="inputText01" class="input__label" aria-hidden="true">항목명</label>
+              <button type="button" class="input__remove-button" aria-label="텍스트삭제"></button>
+            </div>
+            <!-- 에러 메시지 -->
+            <p class="input__error" aria-live="assertive">오류메세지 노출</p>
+          </div>
+          <!-- 가이드 메세지 -->
+          <div class="input__guide-text input__guide-text--left">
+            가이드 메세지 노출
+          </div>
+        </div>
+        <!--// input -->
+
+        <!-- input 데이터가 초기에 자동으로 입력되어 있을때 -->
+        <div class="form-area">
+          <div class="input input--on">
+            <div class="input__inner">
+              <input type="text" id="inputText02" class="input__element" title="입력폼" value="폼 내용" placeholder="">
+              <label for="inputText02" class="input__label" aria-hidden="true">항목명</label>
+              <button type="button" class="input__remove-button" aria-label="텍스트삭제"></button>
+            </div>
+            <!-- 에러 메시지 -->
+            <p class="input__error" aria-live="assertive">오류메세지 노출</p>
+          </div>
+        </div>
+        <!--// input  데이터가 초기에 자동으로 입력되어 있을때 -->
+
+        <!-- input error -->
+        <div class="form-area">
+          <div class="input input--error input--on">
+            <div class="input__inner">
+              <input type="text" id="inputText03" class="input__element" title="입력폼" value="입력오류" placeholder="">
+              <label for="inputText03" class="input__label" aria-hidden="true">항목명</label>
+              <button type="button" class="input__remove-button" aria-label="텍스트삭제"></button>
+            </div>
+            <!-- 에러 메시지 -->
+            <p class="input__error" aria-live="assertive">오류메세지 노출</p>
+          </div>
+        </div>
+        <!--// input error -->
+
+        <!-- input disabled -->
+        <div class="form-area">
+          <div class="input input--disabled">
+            <div class="input__inner">
+              <input type="text" id="inputText04" class="input__element" title="입력폼" value="disabled">
+              <label for="inputText04" class="input__label" aria-hidden="true">항목명</label>
+              <button type="button" class="input__remove-button" aria-label="텍스트삭제" style="display: none;"></button>
+            </div>
+            <!-- 에러 메시지 -->
+            <p class="input__error" aria-live="assertive">오류메세지 노출</p>
+          </div>
+          <!-- 가이드 메세지 -->
+          <div class="input__guide-text input__guide-text--left">
+            가이드 메세지 노출
+          </div>
+        </div>
+        <!--// input disabled -->
+
+        <!-- input 달력 -->
+        <div class="form-area">
+          <div class="input input--on">
+            <div class="input__inner">
+              <input type="text" id="inputText05" class="input__element input-date" title="시작일" value="2023.08.08" readonly="readonly">
+              <label for="inputText05" class="input__label" aria-hidden="true">시작일</label>
+              <button type="button" class="input__calendar-button" aria-label="시작일 선택"></button>
+            </div>
+          </div>
+        </div>
+        <!--// input 달력 -->
+
+        <!-- input 달력 : 시작일 - 종료일 -->
+        <div class="form-area">
+          <div class="input-wrap input--on">
+            <div class="input">
+              <div class="input__inner">
+                <input type="text" id="inputText06" class="input__element input-date" title="시작일" value="2023.08.08" readonly="readonly">
+                <label for="inputText06" class="input__label" aria-hidden="true">시작일</label>
+                <button type="button" class="input__calendar-button" aria-label="시작일 선택"></button>
+              </div>
+            </div>
+            <div class="input">
+              <div class="input__inner">
+                <input type="text" id="inputText07" class="input__element input-date" title="종료일" value="" readonly="readonly">
+                <label for="inputText07" class="input__label" aria-hidden="true">종료일</label>
+                <button type="button" class="input__calendar-button" aria-label="종료일 선택"></button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- input 달력 : 시작일 - 종료일 -->
+
+        <!-- input 왼쪽 텍스트 고정형 -->
+        <div class="form-area">
+          <div class="input-wrap input--on">
+            <div class="input">
+              <div class="input__inner">
+                <div class="input-item-left">$CAD</div>
+                <input type="text" id="inputText08" class="input__element input-price" title="이체금액 입력" placeholder="이체금액 입력">
+                <label for="inputText08" class="input__label" aria-hidden="true">이체금액</label>
+                <button type="button" class="input__remove-button" aria-label="텍스트삭제" style="display: none;"></button>
+              </div>
+              <!-- 에러 메시지 -->
+              <p class="input__error" aria-live="assertive">오류메시지</p>
+            </div>
+          </div>
+        </div>
+        <!--// input 왼쪽 텍스트 고정형 -->
+
+        <!-- input 오른쪽 텍스트 고정형 -->
+        <div class="form-area">
+          <div class="input-wrap">
+            <div class="input">
+              <div class="input__inner">
+                <input type="text" id="inputText09" class="input__element" title="납입기간 입력" placeholder="납입기간 입력">
+                <label for="inputText09" class="input__label" aria-hidden="true">납입기간(6~36개월 이내)</label>
+                <button type="button" class="input__remove-button" aria-label="텍스트삭제" style="display: none;"></button>
+                <div class="input-item-right">개월</div>
+              </div>
+              <!-- 에러 메시지 -->
+              <p class="input__error" aria-live="assertive">오류메시지</p>
+            </div>
+          </div>
+          <div class="btn-group-flex">
+            <button tyle="button" aria-label="12개월">12개월</button>
+            <button tyle="button" aria-label="24개월">24개월</button>
+            <button tyle="button" aria-label="36개월">36개월</button>
+          </div>
+        </div>
+        <!--// input 오른쪽 텍스트 고정형 -->
+
+        <!-- input 오른쪽 버튼 고정형 -->
+        <div class="form-area">
+          <div class="input-wrap ">
+            <div class="input">
+              <div class="input__inner">
+                <input type="text" id="inputText10" class="input__element input__no-label" title="프로모션 코드 입력" placeholder="프로모션 코드 입력">
+                <button type="button" class="input__remove-button" aria-label="텍스트삭제" style="display: none;"></button>
+                <button type="button" class="btn sm line" aria-label="확인" disabled="disabled">확인</button>
+              </div>
+              <!-- 에러 메시지 -->
+              <p class="input__error" aria-live="assertive">오류메시지</p>
+            </div>
+          </div>
+        </div>
+        <!--// input 오른쪽 텍스트 고정형 -->
+
+        <!-- textarea 기본 -->
+        <div class="form-area">
+          <div class="textarea">
+            <label for="textArea01" class="form__label">항목명</label>
+            <textarea class="textarea__element" name="" id="textArea01" cols="30" rows="10" placeholder="입력하세요."></textarea>
+            <!-- 에러 메시지 -->
+            <p class="input__error" aria-live="assertive">오류메시지</p>
+          </div>
+          <!-- 가이드 메세지 -->
+          <div class="input__guide-text input__guide-text--left">
+            가이드 메세지 노출
+          </div>
+        </div>
+        <!--// textarea 기본 -->
+
+        <!-- textarea disabled -->
+        <div class="form-area">
+          <div class="textarea">
+            <label for="textArea01" class="form__label">항목명</label>
+            <textarea class="textarea__element" name="" id="textArea02" cols="30" rows="10" disabled="disabled">disabled</textarea>
+            <!-- 에러 메시지 -->
+            <p class="input__error" aria-live="assertive">오류메시지</p>
+          </div>
+        </div>
+        <!--// textarea disabled -->
+
+        <!-- textarea error -->
+        <div class="form-area">
+          <div class="textarea input--error">
+            <label for="textArea01" class="form__label">항목명</label>
+            <textarea class="textarea__element" name="" id="textArea03" cols="30" rows="10">disabled</textarea>
+            <!-- 에러 메시지 -->
+            <p class="input__error" aria-live="assertive">오류메시지</p>
+          </div>
+        </div>
+        <!--// textarea error -->
+
+      </div>
+    </div>
+    <!-- //Content -->
+    <!-- footer -->
+    <div class="app-footer">
+      <div class="btn-wrap">
+        <button type="button" class="button button--positive">하단버튼</button>
+      </div>
+    </div>
+    <!-- //footer -->
+	</div>
+	<!-- 공통 script -->
+	<script src="../library/jquery/jquery-3.4.1.min.js"></script>
+	<script src="../library/slick/slick.js"></script>
+	<script src="../library/dnd/touch-dnd.js"></script>
+	<script src="../js/ui/pualugin.js"></script>
+	<script src="../js/ui/common.js"></script>
+</body>
+</html>
